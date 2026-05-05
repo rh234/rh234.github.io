@@ -1,1 +1,342 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LUNO - Any game. One platform.</title><meta name="description" content="LUNO: A unified scripting system for any 64-bit game. Write cheats, publish your scripts, and earn."><link rel="icon" type="image/x-icon" href="icon.ico"><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"><style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--bg:#07080d;--acc:#8b70e8;--hi:#dddaf8;--txt:#6c7290;--mid:#9098b8;--dim:#1e2135;--bord:#1c1f32}html,body{background:var(--bg);font-family:'Outfit',sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased;height:100svh;overflow:hidden}.bg{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(1px 1px at 12% 18%,rgba(180,180,255,.5) 0%,transparent 100%),radial-gradient(1px 1px at 78% 7%,rgba(180,180,255,.35) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 90% 32%,rgba(180,180,255,.45) 0%,transparent 100%),radial-gradient(1px 1px at 4% 68%,rgba(180,180,255,.3) 0%,transparent 100%),radial-gradient(1px 1px at 95% 82%,rgba(180,180,255,.4) 0%,transparent 100%),radial-gradient(1px 1px at 35% 4%,rgba(180,180,255,.45) 0%,transparent 100%),radial-gradient(1px 1px at 58% 91%,rgba(180,180,255,.25) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 48% 12%,rgba(180,180,255,.55) 0%,transparent 100%),radial-gradient(1px 1px at 83% 58%,rgba(180,180,255,.25) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 28% 60%,rgba(180,180,255,.4) 0%,transparent 100%)}.wrap{position:relative;z-index:1;height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(20px,4vh,48px) clamp(20px,5vw,64px)}.inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center;width:100%;max-width:1100px}.col-l{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:clamp(14px,2.4vh,22px)}.col-r{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,2vh,20px);min-width:0;width:100%}.wordmark{font-size:14px;font-weight:600;letter-spacing:.16em;color:var(--mid)}.slogan{font-size:clamp(28px,3.6vw,44px);font-weight:700;color:var(--hi);letter-spacing:-.03em;line-height:1.05;white-space:nowrap}.slogan em{font-style:normal;color:var(--acc)}.sub{font-size:clamp(14px,1.4vw,16px);line-height:1.65;max-width:440px}.eta{display:flex;flex-direction:column;gap:6px;margin-top:clamp(8px,1.5vh,16px)}.eta-label{font-size:11px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}.eta-date{font-size:clamp(18px,2.2vw,22px);font-weight:600;color:var(--hi);letter-spacing:-.01em}.note{font-size:11px;color:var(--dim);letter-spacing:.04em;text-transform:uppercase}.proj-line{font-size:14px;line-height:1.5;color:var(--txt);max-width:340px}.carousel{position:relative;width:100%;min-width:0}.track-mask{--fade:36px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--fade),#000 calc(100% - var(--fade)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--fade),#000 calc(100% - var(--fade)),transparent 100%);}.track{display:flex;gap:clamp(12px,1.4vw,18px);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:6px clamp(28px,4vw,48px);-webkit-overflow-scrolling:touch;}.track::-webkit-scrollbar{display:none}.cover{flex:0 0 clamp(120px,14vw,160px);aspect-ratio:2/3;scroll-snap-align:center;border-radius:10px;overflow:hidden;border:1px solid var(--bord);background:#0a0c14;position:relative;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease;}.cover img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) brightness(.85);transition:filter .4s ease,transform .6s ease}.cover:hover{transform:translateY(-4px);border-color:rgba(139,112,232,.5);box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 40px rgba(139,112,232,.22)}.cover:hover img{filter:saturate(1.05) brightness(1);transform:scale(1.04)}.car-foot{display:flex;align-items:center;justify-content:space-between;width:100%;gap:16px}.dots{display:flex;gap:8px;list-style:none}.dots a{display:block;width:18px;height:2px;background:var(--bord);border-radius:1px;transition:background .25s ease,width .25s ease;}.dots a:hover{background:var(--mid)}.swipe-hint{font-size:11px;color:var(--dim);letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}.swipe-hint svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:1.5}.proj-fine{font-size:12px;line-height:1.5;color:var(--mid);max-width:340px;opacity:.8}.proj-fine .ast{color:var(--acc);margin-right:3px}@media (max-width:860px){html,body{height:auto;overflow:auto}.wrap{height:auto;min-height:100svh;padding:48px 24px}.inner{grid-template-columns:1fr;gap:40px;text-align:center;max-width:560px}.col-l,.col-r{align-items:center;text-align:center}.car-foot{justify-content:center;flex-direction:column;gap:10px}.cover{flex:0 0 140px}}</style></head><body><div class="bg"></div><div class="wrap"><div class="inner"><div class="col-l"><h1 class="wordmark">LUNO</h1><h2 class="slogan">Any game, <em>one platform.</em></h2><span class="sub">A unified scripting system for any 64-bit game. Write cheats, publish your scripts, and earn; or simply use the community's best.</span></div><div class="col-r" aria-label="Supported projects"><p class="proj-line">We also support dedicated projects for the following games:</p><div class="carousel"><div class="track-mask"><div class="track" id="track"><a class="cover" id="c1" href="#c1"><img src="covers/cs2.jpg" alt="Counter-Strike 2" loading="lazy" draggable="false"></a><a class="cover" id="c2" href="#c2"><img src="covers/abi.jpg" alt="Arena Breakout: Infinite" loading="lazy" draggable="false"></a><a class="cover" id="c3" href="#c3"><img src="covers/gmod.jpg" alt="Garry's Mod" loading="lazy" draggable="false"></a><a class="cover" id="c4" href="#c4"><img src="covers/ohdeer.jpg" alt="Oh Deer" loading="lazy" draggable="false"></a></div></div></div><p class="proj-fine"><span class="ast">*</span>Products listed here are included with any subscription, free of charge.</p></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LUNO - Any game. One platform.</title>
+    <meta name="description" content="LUNO: A unified scripting system for any 64-bit game. Write cheats, publish your scripts, and earn.">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+      }
+
+      :root {
+        --bg: #07080d;
+        --acc: #8b70e8;
+        --hi: #dddaf8;
+        --txt: #6c7290;
+        --mid: #9098b8;
+        --dim: #1e2135;
+        --bord: #1c1f32
+      }
+
+      html,
+      body {
+        background: var(--bg);
+        font-family: 'Outfit', sans-serif;
+        color: var(--txt);
+        -webkit-font-smoothing: antialiased;
+        height: 100svh;
+        overflow: hidden
+      }
+
+      .bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background-image: radial-gradient(1px 1px at 12% 18%, rgba(180, 180, 255, .5) 0%, transparent 100%), radial-gradient(1px 1px at 78% 7%, rgba(180, 180, 255, .35) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 90% 32%, rgba(180, 180, 255, .45) 0%, transparent 100%), radial-gradient(1px 1px at 4% 68%, rgba(180, 180, 255, .3) 0%, transparent 100%), radial-gradient(1px 1px at 95% 82%, rgba(180, 180, 255, .4) 0%, transparent 100%), radial-gradient(1px 1px at 35% 4%, rgba(180, 180, 255, .45) 0%, transparent 100%), radial-gradient(1px 1px at 58% 91%, rgba(180, 180, 255, .25) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 48% 12%, rgba(180, 180, 255, .55) 0%, transparent 100%), radial-gradient(1px 1px at 83% 58%, rgba(180, 180, 255, .25) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 28% 60%, rgba(180, 180, 255, .4) 0%, transparent 100%)
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 1;
+        height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(20px, 4vh, 48px) clamp(20px, 5vw, 64px)
+      }
+
+      .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(32px, 6vw, 80px);
+        align-items: center;
+        width: 100%;
+        max-width: 1100px
+      }
+
+      .col-l {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: clamp(14px, 2.4vh, 22px)
+      }
+
+      .col-r {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: clamp(14px, 2vh, 20px);
+        min-width: 0;
+        width: 100%
+      }
+
+      .wordmark {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .16em;
+        color: var(--mid)
+      }
+
+      .slogan {
+        font-size: clamp(28px, 3.6vw, 44px);
+        font-weight: 700;
+        color: var(--hi);
+        letter-spacing: -.03em;
+        line-height: 1.05;
+        white-space: nowrap
+      }
+
+      .slogan em {
+        font-style: normal;
+        color: var(--acc)
+      }
+
+      .sub {
+        font-size: clamp(14px, 1.4vw, 16px);
+        line-height: 1.65;
+        max-width: 440px
+      }
+
+      .eta {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: clamp(8px, 1.5vh, 16px)
+      }
+
+      .eta-label {
+        font-size: 11px;
+        color: var(--dim);
+        letter-spacing: .1em;
+        text-transform: uppercase
+      }
+
+      .eta-date {
+        font-size: clamp(18px, 2.2vw, 22px);
+        font-weight: 600;
+        color: var(--hi);
+        letter-spacing: -.01em
+      }
+
+      .note {
+        font-size: 11px;
+        color: var(--dim);
+        letter-spacing: .04em;
+        text-transform: uppercase
+      }
+
+      .proj-line {
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--txt);
+        max-width: 340px
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        min-width: 0
+      }
+
+      .track-mask {
+        --fade: 36px;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%);
+      }
+
+      .track {
+        display: flex;
+        gap: clamp(12px, 1.4vw, 18px);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding: 6px clamp(28px, 4vw, 48px);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .track::-webkit-scrollbar {
+        display: none
+      }
+
+      .cover {
+        flex: 0 0 clamp(120px, 14vw, 160px);
+        aspect-ratio: 2/3;
+        scroll-snap-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid var(--bord);
+        background: #0a0c14;
+        position: relative;
+        transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+      }
+
+      .cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: saturate(.9) brightness(.85);
+        transition: filter .4s ease, transform .6s ease
+      }
+
+      .cover:hover {
+        transform: translateY(-4px);
+        border-color: rgba(139, 112, 232, .5);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, .5), 0 0 40px rgba(139, 112, 232, .22)
+      }
+
+      .cover:hover img {
+        filter: saturate(1.05) brightness(1);
+        transform: scale(1.04)
+      }
+
+      .car-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 16px
+      }
+
+      .dots {
+        display: flex;
+        gap: 8px;
+        list-style: none
+      }
+
+      .dots a {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--bord);
+        border-radius: 1px;
+        transition: background .25s ease, width .25s ease;
+      }
+
+      .dots a:hover {
+        background: var(--mid)
+      }
+
+      .swipe-hint {
+        font-size: 11px;
+        color: var(--dim);
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px
+      }
+
+      .swipe-hint svg {
+        width: 10px;
+        height: 10px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.5
+      }
+
+      .proj-fine {
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--mid);
+        max-width: 340px;
+        opacity: .8
+      }
+
+      .proj-fine .ast {
+        color: var(--acc);
+        margin-right: 3px
+      }
+
+      @media (max-width:860px) {
+
+        html,
+        body {
+          height: auto;
+          overflow: auto
+        }
+
+        .wrap {
+          height: auto;
+          min-height: 100svh;
+          padding: 48px 24px
+        }
+
+        .inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          text-align: center;
+          max-width: 560px
+        }
+
+        .col-l,
+        .col-r {
+          align-items: center;
+          text-align: center
+        }
+
+        .car-foot {
+          justify-content: center;
+          flex-direction: column;
+          gap: 10px
+        }
+
+        .cover {
+          flex: 0 0 140px
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="wrap">
+      <div class="inner">
+        <div class="col-l">
+          <h1 class="wordmark">LUNO</h1>
+          <h2 class="slogan">Any game, <em>one platform.</em>
+          </h2>
+          <span class="sub">A unified scripting system for any 64-bit game. Write cheats, publish your scripts, and earn; or simply use the community's best.</span>
+        </div>
+        <div class="col-r" aria-label="Supported projects">
+          <p class="proj-line">We also support dedicated projects for the following games:</p>
+          <div class="carousel">
+            <div class="track-mask">
+              <div class="track" id="track">
+                <a class="cover" id="c1" href="#c1">
+                  <img src="covers/cs2.jpg" alt="Counter-Strike 2" loading="lazy" draggable="false">
+                </a>
+                <a class="cover" id="c2" href="#c2">
+                  <img src="covers/abi.jpg" alt="Arena Breakout: Infinite" loading="lazy" draggable="false">
+                </a>
+                <a class="cover" id="c3" href="#c3">
+                  <img src="covers/gmod.jpg" alt="Garry's Mod" loading="lazy" draggable="false">
+                </a>
+                <a class="cover" id="c4" href="#c4">
+                  <img src="covers/ohdeer.jpg" alt="Oh Deer" loading="lazy" draggable="false">
+                </a>
+                <a class="cover" id="c5" href="#c5">
+                  <img src="covers/esmw.jpg" alt="The Elder Scrolls III: Morrowind® Game of the Year Edition" loading="lazy" draggable="false">
+                </a>
+              </div>
+            </div>
+          </div>
+          <p class="proj-fine">
+            <span class="ast">*</span>Products listed here are included with any subscription, free of charge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
